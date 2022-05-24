@@ -7,7 +7,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { info } from './data'
 import twitterIcon from './svg/twitter-square-brands.svg';
-import { useHistory } from "react-router";
+
 
 
 import {
@@ -69,14 +69,7 @@ const OneChannel = () =>{
     const [range, setRange] = useState(info)
     const [startDate, setStartDate] = useState(new Date(range[0].date));
     const [endDate, setEndDate] = useState(new Date(range[range.length-1].date));
-    const history = useHistory();
 
-    useEffect(()=>{
-      if(!localStorage.getItem('token')){
-        history.push(`/auth`);
-      }
-      
-    })
 
   const getRangeOfDates = () =>{
     fetch('/report/data.json'

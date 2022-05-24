@@ -4,7 +4,7 @@ import ReportCard from './ReportCard';
 import twitterIcon from './svg/white-twitter.svg';
 import post from './svg/white-list.svg';
 import * as global from '../globalStyle';
-import { useHistory } from "react-router";
+
 
 import {
     Link,
@@ -46,13 +46,7 @@ a{
 
 
 const ReportMenu = () =>{
-    const history = useHistory();
-    useEffect(()=>{
-        if(!localStorage.getItem('token')){
-          history.push(`/auth`);
-        }
-        
-      })
+
     return(
         <Container>
 
